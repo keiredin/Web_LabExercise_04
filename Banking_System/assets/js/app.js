@@ -49,3 +49,31 @@ function withdraw(amount){
 
 }
 
+(function(){
+    
+    let choice = prompt("Enter your choice: 1  Withdraw , 2: Deposit, 3: Balance , 4: Transfer");
+    if (choice == "1"){
+        amount = prompt("Enter the amount you want to withdraw");
+      
+        withdraw(amount);
+  
+     }
+     else if(choice == "2"){
+        amount = prompt("Enter the amount you want to deposit");
+         deposit(amount);
+
+     }
+     else if(choice == "3"){
+         myBalance();
+     }
+     else if(choice == "4"){
+        amount = prompt("Enter the amount you want to transfer");
+        recieverAccountNumber = prompt("Enter the receivers account number")
+         transfer(amount,recieverAccountNumber);
+     }
+     else{
+         console.log("Envalid input!")
+     }
+
+})();
+
